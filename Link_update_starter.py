@@ -3,7 +3,6 @@ from time import sleep
 from sys import executable
 from threading import Thread
 from os import stat
-from os import system as system_caller
 
 
 class Updater(Thread):
