@@ -1,5 +1,7 @@
 from os import system
 import socket
+from threading import Thread
+
 BUFFER_SIZE = 1024*100
 
 
@@ -25,8 +27,9 @@ receiver_connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 receiver_connection.bind(('0.0.0.0', 50010))
 receiver_connection.listen()
 print('ready')
-while True:
+def receiver():
     connection, address = receiver_connection.accept()
+    Thread(target=receiver).start()
     print(address)
     data = eval(__receive_from_connection(connection))
     key, value = list(data.keys())[0], list(data.values())[0]
@@ -38,3 +41,4 @@ while True:
     system('git add .')
     system('git commit -m ".."')
     system('git push')
+Thread(target=receiver).start()
