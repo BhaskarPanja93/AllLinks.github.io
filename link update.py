@@ -9,21 +9,20 @@ change_made = False
 
 def __send_to_connection(connection, data_bytes: bytes):
     data_byte_length = len(data_bytes)
-    connection.send(str(data_byte_length).encode())
-    if connection.recv(1) == b'-':
-        connection.send(data_bytes)
-    if connection.recv(1) == b'-':
-        return
+    connection.send(f'{data_byte_length}'.zfill(8).encode())
+    connection.send(data_bytes)
 
 
 def __receive_from_connection(connection):
-    length = int(connection.recv(BUFFER_SIZE))
-    connection.send(b'-')
+    length = b''
+    while len(length) != 8:
+        length+=connection.recv(8-len(length))
+    length = int(length)
     data_bytes = b''
     while len(data_bytes) != length:
-        data_bytes += connection.recv(BUFFER_SIZE)
-    connection.send(b'-')
+        data_bytes += connection.recv(length-len(data_bytes))
     return data_bytes
+
 
 def git_push():
     global change_made
