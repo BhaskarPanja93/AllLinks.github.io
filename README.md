@@ -1,1 +1,1 @@
-{'adfly_host_main_page': 'http://0.tcp.in.ngrok.io:12160', 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:18304', 'adfly_user_tcp_connection_list': '[]'}
+{'adfly_host_main_page': 'http://0.tcp.in.ngrok.io:16712', 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:18008', 'adfly_user_tcp_connection_list': "['0.tcp.in.ngrok.io:11360', '0.tcp.in.ngrok.io:16192', '0.tcp.in.ngrok.io:11504', '0.tcp.in.ngrok.io:18296']"}
