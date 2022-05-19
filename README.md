@@ -1,1 +1,1 @@
-{'host_page_list': ['http://0.tcp.in.ngrok.io:17928'], 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:16112', 'adfly_user_tcp_connection_list': ['0.tcp.in.ngrok.io:16880', '0.tcp.in.ngrok.io:11872', '0.tcp.in.ngrok.io:10064', '0.tcp.in.ngrok.io:11344']}
+{'host_page_list': ['http://0.tcp.in.ngrok.io:17672'], 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:16888', 'adfly_user_tcp_connection_list': ['0.tcp.in.ngrok.io:10216', '0.tcp.in.ngrok.io:13560', '0.tcp.in.ngrok.io:10192', '0.tcp.in.ngrok.io:19336']}
