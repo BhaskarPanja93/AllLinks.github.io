@@ -31,7 +31,7 @@ def git_push():
             if time() - change_made > 3:
                 system('git add .')
                 system('git commit -m ".."')
-                system('git push')
+                system('git push https://github.com/BhaskarPanja93/AllLinks.github.io')
                 change_made = False
             else:
                 sleep(1)
