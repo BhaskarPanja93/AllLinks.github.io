@@ -1,1 +1,1 @@
-{'adfly_host_page_list': ['10.10.77.118:65500'], 'host_page_list': ['http://0.tcp.in.ngrok.io:13000'], 'adfly_user_tcp_connection_list': ['0.tcp.in.ngrok.io:18344', '0.tcp.in.ngrok.io:14848', '0.tcp.in.ngrok.io:18304', '0.tcp.in.ngrok.io:11640'], 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:11480'}
+{'adfly_host_page_list': ['https://777c-103-27-2-205.in.ngrok.io'], 'host_page_list': ['http://0.tcp.in.ngrok.io:13000'], 'adfly_user_tcp_connection_list': ['0.tcp.in.ngrok.io:19640'], 'adfly_user_tcp_connection': '0.tcp.in.ngrok.io:11480'}
