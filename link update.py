@@ -3,41 +3,47 @@ import socket
 from threading import Thread
 from time import time, sleep
 
-BUFFER_SIZE = 1024*100
-change_made = False
-
+change_made = 0
 
 def __send_to_connection(connection, data_bytes: bytes):
-    data_byte_length = len(data_bytes)
-    connection.send(f'{data_byte_length}'.zfill(8).encode())
-    connection.send(data_bytes)
+    connection.sendall(str(len(data_bytes)).zfill(8).encode()+data_bytes)
 
 
 def __receive_from_connection(connection):
-    length = b''
-    while len(length) != 8:
-        length+=connection.recv(8-len(length))
-    length = int(length)
     data_bytes = b''
-    while len(data_bytes) != length:
-        data_bytes += connection.recv(length-len(data_bytes))
-    return data_bytes
+    length = b''
+    for _ in range(12000):
+        if len(length) != 8:
+            length += connection.recv(8 - len(length))
+            sleep(0.01)
+        else:
+            break
+    else:
+        return b''
+    if len(length) == 8:
+        length = int(length)
+        for _ in range(12000):
+            data_bytes += connection.recv(length - len(data_bytes))
+            sleep(0.01)
+            if len(data_bytes) == length:
+                break
+        else:
+            return b''
+        return data_bytes
+    else:
+        return b''
 
 
 def git_push():
     global change_made
     while True:
+        sleep(1)
         if change_made:
             if time() - change_made > 3:
                 system('git add .')
-                system('git commit -m ".."')
+                system(f'git commit -m "{time()}"')
                 system('git push')
                 change_made = False
-            else:
-                sleep(1)
-        else:
-            sleep(1)
-
 
 
 receiver_connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -49,11 +55,7 @@ def receiver():
     connection, address = receiver_connection.accept()
     Thread(target=receiver).start()
     print(address)
-    data = eval(__receive_from_connection(connection))
-    key, value = list(data.keys())[0], list(data.values())[0]
-    with open('README.md','r') as file:
-        actual_data = eval(file.read())
-    actual_data[key] = value
+    actual_data = eval(__receive_from_connection(connection))
     with open('README.md','w') as file:
         file.write(str(actual_data))
     change_made = time()
