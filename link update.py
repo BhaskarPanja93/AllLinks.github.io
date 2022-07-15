@@ -1,7 +1,7 @@
 from os import system
 import socket
 from threading import Thread
-from time import time, sleep
+from time import time, sleep, ctime
 
 change_made = 0
 
@@ -41,7 +41,7 @@ def git_push():
         if change_made:
             if time() - change_made > 3:
                 system('git add .')
-                system(f'git commit -m "{time()}"')
+                system(f'git commit -m "{ctime()}"')
                 system('git push')
                 change_made = False
 
