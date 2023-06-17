@@ -8,209 +8,203 @@ from os import system as system_caller, remove, system
 
 ## all tunnels to be made along with their name in dictionary, port, other details
 tunnels_to_be_made = {
-'Socket1':{
-"key":"viewbot_tcp_connection_list",
+'0a':{
+"key":"adfly_host_page_list",
 "config":"""
 version: "2"
-region: ap
-authtoken: 28oHShvU9VUXOCY6aQWDpVNi8pG_3nU1hBpDQPMTqPxyrEtaK
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_tcp_connection_list:
-        addr: 192.168.1.2:65499
-        inspect: false
-        proto: tcp
-"""},
-'Socket2':{
-"key":"viewbot_tcp_connection_list",
-"config":"""
-version: "2"
-region: ap
-authtoken: 2DcFDbjSWoONL9wPpqR7TrzRkG0_691tmp39xLpAJn25FiaC5
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_tcp_connection_list:
-        addr: 192.168.1.2:65499
-        inspect: false
-        proto: tcp
-"""},
-'Socket3':{
-"key":"viewbot_tcp_connection_list",
-"config":"""
-version: "2"
-region: ap
-authtoken: 2DcFLz4kDWgTfkoacSGOSPwzrCL_7iVhooTMGr8QqfiD5A995
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_tcp_connection_list:
-        addr: 192.168.1.2:65499
-        inspect: false
-        proto: tcp
-"""},
-'Socket4':{
-"key":"viewbot_tcp_connection_list",
-"config":"""
-version: "2"
-region: ap
-authtoken: 2DcF4xgpB8NR8RicbmRk3HsLSgB_J1TffcJApwCcZ5fSoDfp
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_tcp_connection_list:
-        addr: 192.168.1.2:65499
-        inspect: false
-        proto: tcp
-"""},
-'Web1':{
-"key":"viewbot_global_host_page_list",
-"config":"""
-version: "2"
-region: ap
+region: in
 authtoken: 288KImUNY3LWKmEPFNNUmDCk2OV_3LQiUwwthDHkmQ2Eo8NAx
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_host_page_list:
+        addr: 192.168.200.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
 """},
-'Web2':{
-"key":"viewbot_global_host_page_list",
+'0b':{
+"key":"adfly_user_tcp_connection_list",
 "config":"""
 version: "2"
-region: ap
+region: in
+authtoken: 28oHShvU9VUXOCY6aQWDpVNi8pG_3nU1hBpDQPMTqPxyrEtaK
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_user_tcp_connection_list:
+        addr: 192.168.200.1:65499
+        inspect: false
+        proto: tcp
+"""},
+'1a':{
+"key":"adfly_host_page_list",
+"config":"""
+version: "2"
+region: in
 authtoken: 2DcEw2SNo1b7gtrI8F3Nvqn0BXV_2RovXkJDK8V7mP5zFRkps
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_host_page_list:
+        addr: 192.168.201.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
 """},
-'Web3':{
-"key":"viewbot_global_host_page_list",
+'1b':{
+"key":"adfly_user_tcp_connection_list",
 "config":"""
 version: "2"
-region: ap
+region: in
+authtoken: 2DcFDbjSWoONL9wPpqR7TrzRkG0_691tmp39xLpAJn25FiaC5
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_user_tcp_connection_list:
+        addr: 192.168.201.1:65499
+        inspect: false
+        proto: tcp
+"""},
+'2a':{
+"key":"adfly_host_page_list",
+"config":"""
+version: "2"
+region: in
 authtoken: 2DcFZvIBBfSxHswi1uEilJiOCgM_W5xTFuKVMuqdB8ToSbJk
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_host_page_list:
+        addr: 192.168.202.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
 """},
-'Web4':{
-"key":"viewbot_global_host_page_list",
+'2b':{
+"key":"adfly_user_tcp_connection_list",
 "config":"""
 version: "2"
-region: ap
+region: in
+authtoken: 2DcFLz4kDWgTfkoacSGOSPwzrCL_7iVhooTMGr8QqfiD5A995
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_user_tcp_connection_list:
+        addr: 192.168.202.1:65499
+        inspect: false
+        proto: tcp
+"""},
+'3a':{
+"key":"adfly_host_page_list",
+"config":"""
+version: "2"
+region: in
 authtoken: 2DcEjq3TBJGAzc3N3bHtscnIqS1_4CFoSJtWdDGQ2T7wwUL9t
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_host_page_list:
+        addr: 192.168.203.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
 """},
-'Web5':{
-"key":"viewbot_global_host_page_list",
+'3b':{
+"key":"adfly_user_tcp_connection_list",
 "config":"""
 version: "2"
-region: ap
+region: in
+authtoken: 2DcF4xgpB8NR8RicbmRk3HsLSgB_J1TffcJApwCcZ5fSoDfp
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_user_tcp_connection_list:
+        addr: 192.168.203.1:65499
+        inspect: false
+        proto: tcp
+"""},
+'4a':{
+"key":"adfly_host_page_list",
+"config":"""
+version: "2"
+region: in
 authtoken: 2HRf8FYa3MQVhzdQFZvxHPtDk7F_2JAshTRU7kUuW4Y5FW5Lr
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_host_page_list:
+        addr: 192.168.204.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
 """},
-'Web6':{
-"key":"viewbot_global_host_page_list",
+'4b':{
+"key":"adfly_user_tcp_connection_list",
 "config":"""
 version: "2"
-region: ap
-authtoken: 2HRexNynMGyhwU72nfvRs5OmE8f_6WvwqGRbSEi5FwgRwZG4T
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
-        inspect: false
-        proto: http
-        schemes:
-            - https
-            - http
-"""},
-'Web7':{
-"key":"viewbot_global_host_page_list",
-"config":"""
-version: "2"
-region: ap
-authtoken: 2HReqArC0mWtExMr5vdZaKQniW6_5xhYZTPHxHHuSuxYWERdH
-web_addr: 127.0.0.1:INSPECT_PORT
-inspect_db_size: -1
-log_level: crit
-tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
-        inspect: false
-        proto: http
-        schemes:
-            - https
-            - http
-"""},
-'Web8':{
-"key":"viewbot_global_host_page_list",
-"config":"""
-version: "2"
-region: ap
+region: in
 authtoken: 2HRf1qBP3y3CaSv1BA2b7wVBIHk_4hLrhTATrSVzJeEkNZizh
 web_addr: 127.0.0.1:INSPECT_PORT
 inspect_db_size: -1
 log_level: crit
 tunnels:
-    viewbot_global_host_page_list:
-        addr: 192.168.1.2:65500
+    adfly_user_tcp_connection_list:
+        addr: 192.168.204.1:65499
+        inspect: false
+        proto: tcp
+"""},
+'5a':{
+"key":"adfly_host_page_list",
+"config":"""
+version: "2"
+region: in
+authtoken: 2HRexNynMGyhwU72nfvRs5OmE8f_6WvwqGRbSEi5FwgRwZG4T
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_host_page_list:
+        addr: 192.168.205.1:65500
         inspect: false
         proto: http
         schemes:
             - https
             - http
+"""},
+'5b':{
+"key":"adfly_user_tcp_connection_list",
+"config":"""
+version: "2"
+region: in
+authtoken: 2HReqArC0mWtExMr5vdZaKQniW6_5xhYZTPHxHHuSuxYWERdH
+web_addr: 127.0.0.1:INSPECT_PORT
+inspect_db_size: -1
+log_level: crit
+tunnels:
+    adfly_user_tcp_connection_list:
+        addr: 192.168.205.1:65499
+        inspect: false
+        proto: tcp
 """}
 }
 
