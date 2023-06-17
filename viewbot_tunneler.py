@@ -19,7 +19,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.200.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -37,7 +37,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.200.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """},
@@ -52,7 +52,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.201.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -70,7 +70,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.201.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """},
@@ -85,7 +85,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.202.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -103,7 +103,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.202.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """},
@@ -118,7 +118,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.203.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -136,7 +136,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.203.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """},
@@ -151,7 +151,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.204.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -169,7 +169,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.204.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """},
@@ -184,7 +184,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_host_page_list:
-        addr: 192.168.205.1:65500
+        addr: 127.0.0.1:65500
         inspect: false
         proto: http
         schemes:
@@ -202,7 +202,7 @@ inspect_db_size: -1
 log_level: crit
 tunnels:
     adfly_user_tcp_connection_list:
-        addr: 192.168.205.1:65499
+        addr: 127.0.0.1:65499
         inspect: false
         proto: tcp
 """}
